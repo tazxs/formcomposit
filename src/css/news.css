@@ -1,0 +1,368 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 10px;
+}
+
+:root {
+   --grey-txt: #6F7171;
+   --grey-bg: #222525;
+   --white-txt: #fff;
+   --txt: #C6CACA;
+   --blue-txt: #19BECB;
+   --links-hover: #19BECB;
+   --selection-txt: rgba(25, 191, 203, 0.795);
+   --active-path: #A3A7A7;
+}
+
+::selection {
+   color: var(--selection-txt);
+}
+
+a {
+   color: inherit;
+}
+
+.none {
+   display: none;
+}
+
+.checkbox {
+   opacity: 0;
+   margin-top: 0;
+}
+
+.hamburger-label {
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+}
+
+.hamburger-label span {
+   transition: .4s ease-in-out;
+}
+
+.hamburger-label:hover {
+   span {
+      background-color: var(--links-hover);
+   }
+}
+
+.burger-line-long {
+   display: inline-block;
+   width: 4.7rem;
+   height: .24rem;
+   background-color: #fff;
+   margin-bottom: 1.3rem;
+}
+
+.burger-line-short {
+   display: inline-block;
+   width: 3.525rem;
+   height: .24rem;
+   background-color: #fff;
+   margin-bottom: 1.3rem;
+}
+
+.path {
+   margin-top: 7.5rem;
+   font-size: 1.7rem;
+   color: var(--grey-txt);
+   color: #A3A7A7;
+}
+
+.path a {
+   color: var(--grey-txt);
+}
+
+.path a.active span {
+   color: var(--active-path);
+}
+
+.path a:hover {
+   span {
+      color: var(--links-hover);
+   }
+}
+
+.title-box {
+   margin-top: 3rem;
+   font-size: 5.5rem;
+   color: var(--white-txt);
+   font-weight: 700;
+}
+
+.cards-box {
+   margin-top: 7rem;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+.article__card {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   max-width: 44rem;
+   height: 48rem;
+
+   margin-bottom: 2rem;
+   margin-right: 2rem;
+
+   padding: 4.5rem 5rem;
+   background-color: var(--grey-bg);
+   border-radius: 2rem;
+
+   font-size: 1.6rem;
+   color: var(--white-txt);
+   transition: .4s;
+}
+
+.article__card:hover {
+   transform: translateY(-1rem);
+}
+
+.first-card,
+.third-card {
+   position: relative;
+}
+
+.first-card::before,
+.third-card::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 44rem;
+   height: 48rem;
+   transition: .4s;
+   background-image: url('../img/bg\ \(1\).png');
+   opacity: 0;
+   border-radius: 2rem;
+   z-index: -1;
+}
+
+.third-card::before {
+   background-image: url('../img/93b846ef53999cbfeb9d87518c54606d.png');
+   background-size: 100%;
+   height: 100%;
+   background-repeat: no-repeat;
+}
+
+.first-card:hover::before,
+.third-card:hover::before {
+   opacity: .3;
+}
+
+.card-content {
+   display: flex;
+   flex-direction: column;
+}
+
+.card-date {
+   color: var(--grey-txt);
+   font-size: 1.6rem;
+   font-weight: 400;
+}
+
+.card_first-p {
+   margin-top: 2.5rem;
+   font-size: 2rem;
+   font-weight: 600;
+}
+
+.card_second-p {
+   margin-top: 2rem;
+   font-size: 1.7rem;
+   color: var(--txt);
+   font-weight: 400;
+   line-height: 110%;
+}
+
+.card-footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: max-content;
+}
+
+.card-line {
+   width: 100%;
+   height: 0.1rem;
+   margin-bottom: 1rem;
+   background-color: rgba(255, 255, 255, 0.10);
+}
+
+.card-link {
+   display: flex;
+   position: relative;
+   width: max-content;
+   color: var(--white-txt);
+   align-items: center;
+   transition: .5s;
+}
+
+.card-link:hover {
+   color: var(--links-hover);
+}
+
+.card-link::after {
+   content: '';
+   position: absolute;
+   right: -2rem;
+   width: 1.3rem;
+   height: 1.3rem;
+   background-image: url('../img/arrow.svg');
+   transition: .3s;
+}
+
+.card-link:hover::after {
+   transform: rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+   .none {
+      display: block;
+   }
+}
+
+@media (max-width: 1024px) {
+   .header {
+      .container {
+         .header__top {
+            .nav {
+               .nav__list {
+                  display: none;
+               }
+
+               .nav__last {
+                  margin-left: 40rem;
+               }
+            }
+         }
+      }
+   }
+
+   .main {
+      .news-section {
+         .container {
+            .cards-box {
+               justify-content: space-between;
+
+               .article__card,
+               .first-card::before,
+               .third-card::before {
+                  max-width: 40rem;
+                  height: 45rem;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 320px) {
+   .header {
+      .container {
+         .header__top {
+            .nav {
+               margin-top: 3rem;
+               align-items: flex-end;
+
+               .logo {
+                  a {
+                     img {
+                        width: 3rem;
+                     }
+
+                     p {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        color: #fff;
+                     }
+                  }
+               }
+
+               .nav__last {
+                  display: none;
+               }
+
+               .hamburger-menu {
+                  .hamburger-label {
+                     .burger-line-long {
+                        width: 4rem;
+                        height: 0.2rem;
+                     }
+
+                     .burger-line-short {
+                        width: 2.8rem;
+                        height: 0.2rem;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .main {
+      .news-section {
+         .container {
+            .path {
+               margin-top: 3.5rem;
+               font-size: 1.2rem;
+            }
+
+            .title-box {
+               margin-top: 2rem;
+               font-size: 2.5rem;
+            }
+
+            .cards-box {
+               margin-top: 2rem;
+
+               .article__card {
+                  padding: 2rem 2rem;
+                  background-size: 100%;
+                  margin-right: 0;
+               }
+
+               .article__card,
+               .third-card::before,
+               .first-card::before {
+                  width: 28rem;
+                  height: 28rem;
+                  margin-left: 0;
+
+                  .card-content {
+                     .card-date {
+                        font-size: 1.3rem;
+                     }
+
+                     .card_first-p {
+                        width: 24rem;
+                        font-size: 1.4rem;
+                        line-height: 1.54rem;
+                        font-weight: 500;
+                        margin-top: 1.5rem;
+                     }
+
+                     .card_second-p {
+                        font-size: 1.3rem;
+                        width: 24rem;
+                     }
+                  }
+
+                  .card-footer {
+                     font-size: 1.4rem;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

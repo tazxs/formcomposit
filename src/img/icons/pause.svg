@@ -1,0 +1,20 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="pause" clip-path="url(#clip0_745_229)">
+<g id="Rectangle 134" filter="url(#filter0_b_745_229)">
+<rect width="60" height="60" rx="30" fill="white" fill-opacity="0.1"/>
+</g>
+<rect id="Rectangle 135" x="22" y="19" width="3" height="22" fill="white"/>
+<rect id="Rectangle 136" x="35" y="19" width="3" height="22" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_b_745_229" x="-15" y="-15" width="90" height="90" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="7.5"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_745_229"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_745_229" result="shape"/>
+</filter>
+<clipPath id="clip0_745_229">
+<rect width="60" height="60" fill="white"/>
+</clipPath>
+</defs>
+</svg>

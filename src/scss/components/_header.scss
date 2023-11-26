@@ -1,0 +1,329 @@
+@import "./variable.scss";
+.header {
+    transition: 0.3s;
+    background: url(../img/bgs/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+    width: 100%;
+    .container {
+        max-width: 1480px;
+        margin: 0 auto;
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 6rem;
+            .nav {
+                .nav_link {
+                    color: $light;
+                    font-variant-numeric: lining-nums proportional-nums;
+                    font-family: Raleway;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 110%;
+                    margin-right: 3.5rem;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            .phone {
+                display: flex;
+                align-items: center;
+                a {
+                    color: #fff;
+                    font-family: Raleway;
+                    font-size: 1.8rem;
+                    line-height: 110%;
+                    text-transform: uppercase;
+                    margin-left: 1rem;
+                }
+            }
+        }
+        .header_bottom {
+            padding-top: 568px;
+            .header_subtitle {
+                color: rgba(255, 255, 255, 0.7);
+                font-variant-numeric: lining-nums proportional-nums;
+                font-family: Raleway;
+                font-size: 3rem;
+                font-weight: 500;
+                line-height: 110%;
+                margin-bottom: 3.5rem;
+            }
+            .header_title {
+                color: #fff;
+                font-variant-numeric: lining-nums proportional-nums;
+                font-family: Raleway;
+                font-size: 5.5rem;
+                font-weight: 700;
+                line-height: 120%;
+                max-width: 681px;
+            }
+        }
+        .header_slider {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 8.3rem;
+            padding-bottom: 13rem;
+            .slider_left {
+                display: flex;
+                align-items: center;
+                .slider_numbers {
+                    color: #fff;
+                    font-variant-numeric: lining-nums proportional-nums;
+                    font-family: Raleway;
+                    font-size: 2rem;
+                    font-weight: 500;
+                    line-height: 120%;
+                    margin-right: 4.3rem;
+                    span {
+                        color: rgba(255, 255, 255, 0.7);
+                        font-variant-numeric: lining-nums proportional-nums;
+                        font-family: Raleway;
+                        font-weight: 500;
+                        line-height: 120%;
+                    }
+                }
+            }
+            .slider_right {
+                display: flex;
+                align-items: center;
+                .pause {
+                    margin-right: 10px;
+                }
+                .frames {
+                    width: 150px;
+                    height: 60px;
+                    border-radius: 60px;
+                    background: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(7.5px);
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    img {
+                        padding: 0px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.nav-modal{
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    .header .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+    }
+    .header .hamburger-menu {
+        // Стилизация гамбургера
+    }
+    .nav-modal {
+        position: fixed;
+        top: -100%; 
+        left: 0;
+        width: 100%;
+        height: 50%; 
+        background: #1B1E1E;
+        transition: top 0.3s ease;
+        z-index: 100;
+        display: block;
+        .nav-content{
+            .nav_top{
+                padding-top: 4rem;
+                .nav-container{
+                    padding-top: 2.8rem;
+                    padding-bottom: 2.8rem;
+                    margin: 0 5rem;
+                    width: 900px;
+                    display: flex;
+                    justify-content: space-between;
+                    .nav_wrapper{
+                        display: flex;
+                        align-items: center;
+                        .phone {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 7.7rem;
+                            a {
+                                color: #fff;
+                                font-family: Raleway;
+                                font-size: 1.8rem;
+                                line-height: 110%;
+                                text-transform: uppercase;
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                    .nav-nav{
+                        .nav_title{
+                            color: #6F7171;
+                            font-family: Raleway;
+                            font-size: 2rem;
+                            font-weight: 500;
+                            line-height: 110%; 
+                            text-transform: uppercase;
+                            margin-bottom: 4.5rem;
+                        }
+                        ul{
+                            list-style: none;
+                            li{
+                                list-style: none;
+                                margin-bottom: 4.5rem;
+                                &:last-child{
+                                    margin-bottom: 0;
+                                }
+                                .nav_link{
+                                    color: #EAEAEA;
+                                    font-family: Raleway;
+                                    font-size: 2rem;
+                                    font-weight: 500;
+                                    line-height: 110%; /* 22px */
+                                }
+                            }
+                        }
+                    }
+                    .nav-prod{
+                        .nav_title{
+                            color: #6F7171;
+                            font-family: Raleway;
+                            font-size: 2rem;
+                            font-weight: 500;
+                            line-height: 110%; 
+                            text-transform: uppercase;
+                            margin-bottom: 4.5rem;
+                        }
+                        ul{
+                            list-style: none;
+                            li{
+                                list-style: none;
+                                margin-bottom: 4.5rem;
+                                &:last-child{
+                                    margin-bottom: 0;
+                                }
+                                .nav_link{
+                                    color: #EAEAEA;
+                                    font-family: Raleway;
+                                    font-size: 2rem;
+                                    font-weight: 500;
+                                    line-height: 110%; /* 22px */
+                                }
+                            }
+                        }
+                    }
+                    .block_one{
+                        h2{
+                            color: #FFF;
+                            font-family: Raleway;
+                            font-size: 2.5rem;
+                            font-weight: 600;
+                            line-height: 110%; /* 27.5px */
+                        }
+                        p{
+                            color:#FFF;
+                            font-family: Raleway;
+                            font-size: 2.5rem;
+                            font-weight: 600;
+                            line-height: 110%; /* 27.5px */
+                        }
+                    }
+                    .block_two{
+                        .btn{
+                            color:#FFF;
+                            font-family: Raleway;
+                            font-size: 2rem;
+                            font-weight: 600;
+                            line-height: 110%; /* 22px */
+                            width: 280px;
+                            padding: 20px 50px;
+                            border-radius: 106px;
+                            background: linear-gradient(270deg, #25B7BC 0%, #007FA1 100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 50;
+    }
+    .show-nav-modal {
+        top: 0; 
+    }
+    .show-modal-overlay {
+        display: block; 
+    }
+    .nav {
+        display: none;
+    }
+    .header {
+        .container {
+            max-width: 95%;
+        }
+        .header_top {
+            padding-top: 4rem; // Уменьшено с 6rem
+            .nav {
+                .nav_link {
+                    font-size: 1.4rem; // Уменьшено с 1.6rem
+                    margin-right: 2rem; // Уменьшено с 3.5rem
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            .phone {
+                a {
+                    font-size: 1.6rem; // Уменьшено с 1.8rem
+                    // Здесь можно добавить изменения для изображения телефона, если необходимо
+                }
+            }
+        }
+        .header_bottom {
+            padding-top: 300px; // Уменьшено с 568px
+            .header_subtitle {
+                font-size: 2.5rem; // Уменьшено с 3rem
+            }
+            .header_title {
+                font-size: 4.5rem; // Уменьшено с 5.5rem
+                max-width: 100%; // Уменьшено с 681px
+            }
+        }
+        .header_slider {
+            margin-top: 5rem; // Уменьшено с 8.3rem
+            padding-bottom: 10rem; // Уменьшено с 13rem
+            .slider_left {
+                .slider_numbers {
+                    font-size: 1.8rem; // Уменьшено с 2rem
+                }
+            }
+            .slider_right {
+                .frames {
+                    // Здесь можно добавить изменения для адаптации размеров и отступов
+                }
+            }
+        }
+    }
+}
+main {
+    padding-top: 60px;
+}
